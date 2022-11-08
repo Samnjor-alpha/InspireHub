@@ -25,30 +25,29 @@
                 <div class="col-lg-2 col-md-6 footer-links">
                     <h4>Useful Links</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#hero">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#about">About us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#services">Services</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#portfolio">Products</a></li>
+
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Our Services</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#services">Web Design</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#services">Web Development</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#services">Mobile Development</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#services">Bulk SMS</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-4 col-md-6 footer-newsletter">
                     <h4>Our Newsletter</h4>
-                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                    <p>Subscribe to our Mailing List to get updates on our services offers</p>
                     <form action="" method="post">
-                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                        <input type="email"  required name="email"><input type="submit" value="Subscribe">
                     </form>
 
                 </div>

@@ -192,7 +192,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
+* Desktop Navigation
 */
 .navbar {
   padding: 0;
@@ -304,7 +304,7 @@ h6 {
 }
 
 /**
-* Mobile Navigation 
+* Mobile Navigation
 */
 .mobile-nav-toggle {
   color: #fff;
@@ -1585,6 +1585,12 @@ section {
   font-size:30px;
   box-shadow: 2px 2px 3px #999;
   z-index:100;
+}
+.float:hover {
+  background: #2F358FFF;
+  color: #fff;
+  text-decoration: none;
+
 }
 
 .my-float{
