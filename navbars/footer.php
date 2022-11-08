@@ -9,7 +9,7 @@
                         <p>
                             Machakos-Kangundo Rd, <br>
                             Machakos, Kenya<br>
-                            <strong>Phone:</strong> +254 5589 55488 55<br>
+                            <strong>Phone:</strong> +254706171725<br>
                             <strong>Email:</strong> info@inspirehub.co.ke<br>
                         </p>
                         <div class="social-links mt-3">

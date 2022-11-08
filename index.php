@@ -541,7 +541,7 @@
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                  <p> +254 5589 55488 55</p>
+                  <p> +254706171725</p>
 
               </div>
 
@@ -551,7 +551,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -585,7 +585,9 @@
 
   <!-- ======= Footer ======= -->
 <?php include 'navbars/footer.php' ?>
-
+  <a aria-label="Chat on WhatsApp" href="https://web.whatsapp.com/send?phone=254706171725&text=Hello%20there%2C%20got%20any%20questions%3F%20InspireHub%20is%20here%20to%20serve%20you." class="float" target="_blank">
+      <i class="fab fa-whatsapp my-float"></i>
+  </a>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
