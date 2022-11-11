@@ -1,7 +1,6 @@
 <?php include 'database/config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Home</title>
   <?php include 'styles/css.php'?>
