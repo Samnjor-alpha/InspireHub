@@ -9,7 +9,7 @@
                         <p>
                             Machakos-Kangundo Rd, <br>
                             Machakos, Kenya<br>
-                            <strong>Phone:</strong> +254706171725<br>
+                            <strong>Phone:</strong> +254706171725, +254757286440<br>
                             <strong>Email:</strong> info@inspirehub.co.ke<br>
                         </p>
                         <div class="social-links mt-3">
@@ -47,7 +47,7 @@
                     <h4>Our Newsletter</h4>
                     <p>Subscribe to our Mailing List to get updates on our services offers</p>
                     <form action="" method="post">
-                        <input type="email"  required name="email"><input type="submit" value="Subscribe">
+                        <input type="email"  required name="email"><input name="subscribe" type="submit" value="Subscribe">
                     </form>
 
                 </div>

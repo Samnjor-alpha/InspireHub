@@ -82,7 +82,7 @@
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member" data-aos="fade-up" data-aos-delay="300">
                     <div class="member-img">
-                        <img src="https://via.placeholder.com/600x600.png?text=Mobile Developer" class="img-fluid" alt="">
+                        <img src="https://via.placeholder.com/600x600.png?text=Business Development" class="img-fluid" alt="">
                         <div class="social">
                             <a href=""><i class="bi bi-twitter"></i></a>
                             <a href=""><i class="bi bi-facebook"></i></a>

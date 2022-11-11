@@ -177,10 +177,13 @@ h6 {
 }
 
 .get-started-btn:hover {
-  background: #ffbb38;
+  background-color: #ffbb38;
   color: #343a40;
 }
-
+.get-started-btn  .active {
+  background: #ffbb38;
+  color: #ffbb38;
+}
 @media (max-width: 992px) {
   .get-started-btn {
     padding: 7px 20px 8px 20px;
@@ -416,7 +419,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("https://via.placeholder.com/1920x1280.png?text=Hero image") top center;
+  background: url(../img/hero.jpg) top center;
   background-size: cover;
   position: relative;
 }
@@ -1262,16 +1265,16 @@ section {
   margin-top: 40px;
 }
 
-.contact .php-email-form {
+.contact .request {
   width: 100%;
   background: #fff;
 }
 
-.contact .php-email-form .form-group {
+.contact .request .form-group {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form .error-message {
+.contact .request .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -1280,11 +1283,11 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .request .error-message br+br {
   margin-top: 25px;
 }
 
-.contact .php-email-form .sent-message {
+.contact .request .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -1293,14 +1296,14 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .loading {
+.contact .request .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
 
-.contact .php-email-form .loading:before {
+.contact .request .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1313,28 +1316,28 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input,
-.contact .php-email-form textarea {
+.contact .request input,
+.contact .request textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   border-radius: 4px;
 }
 
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
+.contact .request input:focus,
+.contact .request textarea:focus {
   border-color: #f89420;
 }
 
-.contact .php-email-form input {
+.contact .request input {
   height: 44px;
 }
 
-.contact .php-email-form textarea {
+.contact .request textarea {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .request button[type=submit] {
   background: #f89420;
   border: 0;
   padding: 10px 24px;
@@ -1343,7 +1346,7 @@ section {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .request button[type=submit]:hover {
   background: #ffcd6b;
   color:#151515;
 }

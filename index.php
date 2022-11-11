@@ -1,3 +1,4 @@
+<?php include 'database/config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +57,7 @@
 
   <!-- Vendor JS Files -->
 <?php include 'styles/scripts.php'?>
-
+  <?php include 'controllers/requestquote.php' ?>
 </body>
 
 </html>

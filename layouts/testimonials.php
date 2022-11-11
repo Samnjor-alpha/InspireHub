@@ -7,8 +7,8 @@
                 <div class="swiper-slide">
                     <div class="testimonial-item">
                         <img src="https://ui-avatars.com/api/?name=Alfred Kyalo&background=0D8ABC&color=fff" class="testimonial-img" alt="">
-                        <h3>Alfred Kyalo</h3>
-                        <h4>Ceo &amp; Founder Mbukoni Services</h4>
+                        <h3>Dorcas Kalekye</h3>
+                        <h4>Administrator Mbukoni Services</h4>
                         <p>
                             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                             We are very satisfied and happy to have found Inspire Hub Ltd as our IT Service partner. During our relationship,
@@ -21,8 +21,8 @@
                 <div class="swiper-slide">
                     <div class="testimonial-item">
                         <img src="https://ui-avatars.com/api/?name=Diana Kyalo&background=0D8ABC&color=fff" class="testimonial-img" alt="">
-                        <h3>Diana Kyalo</h3>
-                        <h4>Director  JaniFresh</h4>
+                        <h3>Grace Wang'ui</h3>
+                        <h4>Administrative Assistant  JaniFresh</h4>
                         <p>
                             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
 
@@ -36,7 +36,7 @@
                 <div class="swiper-slide">
                     <div class="testimonial-item">
                         <img src="https://ui-avatars.com/api/?name=DANFI &background=0D8ABC&color=fff" class="testimonial-img" alt="">
-                        <h3>DANFI</h3>
+                        <h3>Martin</h3>
                         <h4>CEO Danfi Enterprises LTD</h4>
                         <p>
                             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
