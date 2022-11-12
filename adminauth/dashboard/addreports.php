@@ -15,9 +15,11 @@ include '../admincontrollers/helper.php';
             width: 100%;
             padding: 20px 0 20px 20px;
             border-bottom: 1px solid #ccc;
-            font-size: 12px;
+            font-size: 14px;
         }
-
+        .ck-editor__editable {
+            min-height: 50px;
+        }
 
 
 
@@ -177,6 +179,8 @@ include '../admincontrollers/helper.php';
     function delete_row(rowno) {
         $('#' + rowno).remove();
     }
+
+        CKEDITOR.config.height='80px';
 
 
 </script>
