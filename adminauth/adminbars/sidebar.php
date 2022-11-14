@@ -49,7 +49,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="addreports.php" class="nav-link <?php active('reports.php'); active('addreports.php'); ?>">
+                    <a href="addreports.php" class="nav-link <?php active('reports.php');
+                    active('engagements.php');
+                    active('addreport.php');
+                    active('viewreport.php');
+                    active('addreports.php'); ?>">
                         <i class="nav-icon far fa-file-pdf"></i>
                         <p>
                             Reports

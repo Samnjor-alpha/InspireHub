@@ -24,6 +24,8 @@
 <script src="<?php  echo BASE_URL?>adminauth/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php  echo BASE_URL?>adminauth/dist/js/demo.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js"></script>
 <!-- Page specific script -->
 <script>
     $(function () {

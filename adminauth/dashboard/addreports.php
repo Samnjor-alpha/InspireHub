@@ -1,6 +1,7 @@
 <?php include '../../database/config.php';
 include '../admincontrollers/authcontrollers.php';
 include '../admincontrollers/helper.php';
+include '../admincontrollers/session.php';
 
 ?>
 <!DOCTYPE html>
@@ -17,13 +18,7 @@ include '../admincontrollers/helper.php';
             border-bottom: 1px solid #ccc;
             font-size: 14px;
         }
-        .ck-editor__editable {
-            min-height: 50px;
-        }
-
-
-
-        .col2-buttonX {
+           .col2-buttonX {
             background: #c8060f;
             color: #fff;
             border: none;
@@ -110,11 +105,11 @@ include '../admincontrollers/helper.php';
                                         <div class="col-6">
 
                                             <label>Company</label>
-                                            <input id="" name="comp_name[]" class="form-control" placeholder="Company/Organization"/>
+                                            <input id="" name="comp_name[]" class="form-control" placeholder="Company/Organization" required>
                                             <label>Contact Person:</label>
-                                            <input class="form-control" id="" name="contact_name[]" placeholder="contact Person">
+                                            <input class="form-control" id="" name="contact_name[]" placeholder="contact Person" required>
                                             <label>Date</label>
-                                            <input type="date" id=""  class="form-control" name="date_met[]">
+                                            <input type="date" id=""  class="form-control" name="date_met[]" required>
                                         </div>
                                     </div>
                                 <div class="row">
@@ -132,7 +127,7 @@ include '../admincontrollers/helper.php';
 
 
                                 <div class="text-center">
-                                    <button name="prj_init" style="width:20%; height:50px; margin-top:20px; background:#075f96; color:#fff; border:none;">Start Report</button>
+                                    <button name="report_init" style="width:20%; height:50px; margin-top:20px; background:#075f96; color:#fff; border:none;">Start Report</button>
                                 </div>
 
 
@@ -153,7 +148,9 @@ include '../admincontrollers/helper.php';
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
-<?php include '../adminstyles/scripts.php' ?>
+<?php include '../adminstyles/scripts.php';
+include '../admincontrollers/addreport.php';
+?>
 <script>
 
     function add_row() {

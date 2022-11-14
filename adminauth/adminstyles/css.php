@@ -43,6 +43,16 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 <script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" rel="stylesheet"/>
+<style>
+.bootstrap-tagsinput .tag {
+margin-right: 5px;
+color: white !important;
+border-radius: 5px;
+background-color: #0d6efd;
+padding: 0.2rem;
+}
+</style>
 <script>
     toastr.options = {
         "debug": false,

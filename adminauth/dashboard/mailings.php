@@ -1,6 +1,7 @@
 <?php include '../../database/config.php';
 include '../admincontrollers/authcontrollers.php';
 include '../admincontrollers/helper.php';
+include '../admincontrollers/session.php';
 
 ?>
 <!DOCTYPE html>
