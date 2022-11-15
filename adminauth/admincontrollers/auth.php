@@ -1,19 +1,55 @@
 <?php
-if (isset($_POST['fl_sign'])){
-$pwd=$_POST['pwd'];
-    if(createfirstadmin($pwd)){
-        echo "<script>
-toastr.success('Account  setup was successful', 'Account created');
+if (isset($_POST['signup'])){
+    $fnames=trim($_POST['fnames'],'');
+    $work_mail=trim($_POST['wemail'],'');
+    $pers_email=trim($_POST['pemail'],'');
+    $pwd=trim($_POST['pwd'],'');
+    $cpwd=trim($_POST['cpwd'],'');
 
+    if (!empty($fnames)|| !empty($work_mail)|| !empty($pers_email)|| !empty($pwd) || !empty($cpwd)){
+if (filter_var($work_mail, FILTER_VALIDATE_EMAIL)===false && filter_var($pers_email, FILTER_VALIDATE_EMAIL)){
+    echo "<script>
+toastr.error('invalid email formats','Invalid Email');
 </script>";
-
+}elseif (!verifyworkmail($work_mail)){
+    echo "<script>
+toastr.error('Use the work email provided','Unknown Work Email');
+</script>";
+}elseif(checkworkemail($work_mail)){
+    echo "<script>
+toastr.error('The work email does not exist','Unknown Work Email');
+</script>";
+}elseif (checkifemailexists($work_mail)|| checkifemailexists($pers_email)){
+    echo "<script>
+toastr.info('Personal or Work Email is associated with an account','Email Exists');
+</script>";
+}elseif ($pwd !==$cpwd){
+    echo "<script>
+toastr.error('Password do not match','Password Mismatch');
+</script>";
+}else{
+    $hash=password_hash($pwd,PASSWORD_DEFAULT);
+    $today =date('Y-m-d H:i:s');
+    $add="insert into admins set names='$fnames',email='$work_mail',p_email='$pers_email',role='admin',password='$hash',created_at='$today'";
+    if (mysqli_query($conn,$add)){
+        $_SESSION['adminID']=mysqli_insert_id($conn);
+        $_SESSION['role'] = 'admin';
+        $_SESSION['Anames'] =$fnames;
+        $_SESSION['Aemail'] =$work_mail;
+        echo "<script>
+toastr.success('Account created successfully.');
+window.location.href='dashboard/dashboard.php';
+</script>";
     }else{
         echo "<script>
-toastr.info('Account already exists', 'Contact admin for account creation');
+toastr.error('An error occured.Try again.','Error');
 
 </script>";
+    }
+}
 
     }
+
 }
 
 

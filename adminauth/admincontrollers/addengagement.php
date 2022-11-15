@@ -10,24 +10,28 @@ $today=date('Y-m-d H:i:s');
 if (isset($_POST['saveprospects'])) {
     $pid = $_POST['cid'];
     $comments = $_POST['comment'];
-    $take = implode(',', $_POST['take']);
-    $movs = implode(',', $_POST['mov']);
-    $notes = implode(',', $_POST['notes']);
+    $take = $_POST['take'];
+    $movs = $_POST['mov']?? null ;
+    $notes =  $_POST['notes']?? null;
 
     if (is_null($pid) || is_null($comments)) {
         echo "<script>
 toastr.error('Select a company to fill the engagements');
         </script>";
     } else {
+$notes=implode($notes);
+$movs=implode($movs);
+$take=implode($take);
 
 
         foreach ($_POST['comment'] as $k => $comments) {
             if (!empty($comments)) {
 
                 if (!is_array($comments)) {
+                    $comment=htmlentities($comments);
                     if ($conn->query("insert into engagements
                                             set prospect_id='$pid',
-                                                comment='$comments',
+                                                comment='$comment',
                                                 mov='$movs',
                                                 take='$take',
                                                 notes='$notes',

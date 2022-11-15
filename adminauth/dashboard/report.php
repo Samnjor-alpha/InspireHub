@@ -64,7 +64,7 @@ include '../admincontrollers/prospects.php';
                 <div class="row">
                     <?php include '../adminbars/reportsbar.php' ?>
                     <div class="col-7 col-sm-9">
-                        <?php include '../adminbars/addreportbar.php'?>
+
                         <div class="mt-3">
 
                             <div class="row-title text-center">BUSINESS DEVELOPMENT REPORT</div>
@@ -103,23 +103,23 @@ include '../admincontrollers/prospects.php';
                                         <?php
                                         $i = 1;
                                         while($rowen=mysqli_fetch_assoc($engagements)){?>
-                                        <tr>
-                                            <td><?= $i;?></td>
-                                            <td><?= getcompanyname($rowen['prospect_id']) ?></td>
-                                            <td><?=  $rowen['contact_person']?></td>
-                                            <td><?= $rowen['comment']?></td>
-                                            <td><?= $rowen['take']?></td>
-                                            <td><?= $rowen['mov'] ?></td>
-                                        </tr>
-                                        <?php
-                                        $i++;
+                                            <tr>
+                                                <td><?= $i;?></td>
+                                                <td><?= getcompanyname($rowen['prospect_id']) ?></td>
+                                                <td><?=  $rowen['contact_person']?></td>
+                                                <td><?= $rowen['comment']?></td>
+                                                <td><?= $rowen['take']?></td>
+                                                <td><?= $rowen['mov'] ?></td>
+                                            </tr>
+                                            <?php
+                                            $i++;
                                         } ?>
 
                                         </tbody>
                                     </table>
+                                </div>
                             </div>
                         </div>
-                    </div>
                         <div class="mt-3">
                             <h6>Notes:</h6>
                             <div class="col-md-12">
@@ -151,114 +151,114 @@ include '../admincontrollers/prospects.php';
                                 </table>
                             </div>
                         </div>
-                </div>
+                    </div>
 
-            </div><!-- /.container-fluid -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->
         </div>
-        <!-- /.content -->
+
+
     </div>
 
+    <!-- ./wrapper -->
 
-</div>
-
-<!-- ./wrapper -->
-
-<!-- REQUIRED SCRIPTS -->
-<?php include '../adminstyles/scripts.php';
-include '../admincontrollers/addengagement.php';
-?>
-<script>
+    <!-- REQUIRED SCRIPTS -->
+    <?php include '../adminstyles/scripts.php';
+    include '../admincontrollers/addengagement.php';
+    ?>
+    <script>
 
 
-    function add_row() {
-        $rowno = $("#employee_table tr").length;
-        $rowno = $rowno + 1;
-        $("#employee_table tr:last").after("<tr style='border-top: 1px solid #ccc; margin-top:0px; padding-top:0px;float: left;' id='row" + $rowno + "'>" +
-            "<td><h3>Take </h3><textarea class='form-control'  name='take[]' rows='4' cols='50'></textarea>" +
-            "</td>" +
-            "<td>" +
-            "<input type='button' value='X' class='col2-buttonX' onclick=delete_row('row" + $rowno + "')><td>" +
-            "<input type='button' value='+ Add MOV' class='col2-button' onclick='add_indicator();'></td></tr>");
-    }
+        function add_row() {
+            $rowno = $("#employee_table tr").length;
+            $rowno = $rowno + 1;
+            $("#employee_table tr:last").after("<tr style='border-top: 1px solid #ccc; margin-top:0px; padding-top:0px;float: left;' id='row" + $rowno + "'>" +
+                "<td><h3>Take </h3><textarea class='form-control'  name='take[]' rows='4' cols='50'></textarea>" +
+                "</td>" +
+                "<td>" +
+                "<input type='button' value='X' class='col2-buttonX' onclick=delete_row('row" + $rowno + "')><td>" +
+                "<input type='button' value='+ Add MOV' class='col2-button' onclick='add_indicator();'></td></tr>");
+        }
 
-    function delete_row(rowno) {
-        $('#' + rowno).remove();
-    }
-
-
-    function add_indicator() {
-        $rowno_ind = $("#employee_table_ind tr").length;
-        $rowno_ind = $rowno_ind + 1;
-        $("#employee_table tr:last").after("<tr style='border-top: 1px solid #ccc; margin-top:5px; padding-top:0px;float: left; color:#000;' id='row_ind" + $rowno_ind + "'>" +
-            "<h3>M.o.v</h3>" +
-            "<td style='font-weight:bold;'>Means Of Verification<br><br>" +
-            "<select type='text'  id='tags' class='form-control' name='mov[]' multiple>" +
-
-            "<option>Called</option>" +
-            "<option>Visited</option>"+
-            "</select>" +
-            "</td>" +
-            "<td><input type='button' value='X' class='col2-buttonX' onclick=delete_row_ind('row_ind" + $rowno_ind + "')></td>" +
-            "<td><input type='button' value='+ Add Notes' class='col2-button' onclick='add_activity();'>" +
-            "</td></tr>");
-    }
-
-    function delete_row_ind(rowno) {
-        $('#' + $rowno).remove();
-    }
+        function delete_row(rowno) {
+            $('#' + rowno).remove();
+        }
 
 
-    function add_activity() {
-        $row_act = $("#employee_table_act tr").length;
-        $row_act = $row_act + 1;
-        $("#employee_table tr:last").after("<tr style='border-top: 1px solid #ccc; margin-top:0px; padding-top:0px;float: left;' id='row_act" + $row_act + "'><td>" +
-            "<label>Notes</label></td>" +
-            "<td><textarea  name='notes[]' class='form-control' rows='3' cols='50'></textarea></td></tr>");
-    }
+        function add_indicator() {
+            $rowno_ind = $("#employee_table_ind tr").length;
+            $rowno_ind = $rowno_ind + 1;
+            $("#employee_table tr:last").after("<tr style='border-top: 1px solid #ccc; margin-top:5px; padding-top:0px;float: left; color:#000;' id='row_ind" + $rowno_ind + "'>" +
+                "<h3>M.o.v</h3>" +
+                "<td style='font-weight:bold;'>Means Of Verification<br><br>" +
+                "<select type='text'  id='tags' class='form-control' name='mov[]' multiple>" +
 
-    function delete_row_act(row_act) {
-        $('#' + $row_act).remove();
-    }
+                "<option>Called</option>" +
+                "<option>Visited</option>"+
+                "</select>" +
+                "</td>" +
+                "<td><input type='button' value='X' class='col2-buttonX' onclick=delete_row_ind('row_ind" + $rowno_ind + "')></td>" +
+                "<td><input type='button' value='+ Add Notes' class='col2-button' onclick='add_activity();'>" +
+                "</td></tr>");
+        }
 
-
-    function add_ver() {
-        $row_ver = $("#employee_table_ver tr").length;
-        $row_ver = $row_ver + 1;
-        $("#employee_table tr:last").after("<tr style='border-top: 1px solid #ccc; margin-top:0px; padding-top:0px;float: left;' id='row" + $row_ver + "'>" +
-            "<td><label>Text:</label></td><td><textarea  name='name[]' rows='7' cols='50'> </textarea></td><td><label>Upload Files:</label></td><td><input type='file' id='myFile' name='filename'></td><td><input type='button' value='X' class='col2-buttonX' onclick=delete_row_ver('row" + $row_ver + "')></td></tr>");
-    }
-
-    function delete_row_ver(row_ver) {
-        $('#' + $row_ver).remove();
-    }
+        function delete_row_ind(rowno) {
+            $('#' + $rowno).remove();
+        }
 
 
-    function add_row_outcome() {
-        $rowout = $("#employee_table_outcome tr").length;
+        function add_activity() {
+            $row_act = $("#employee_table_act tr").length;
+            $row_act = $row_act + 1;
+            $("#employee_table tr:last").after("<tr style='border-top: 1px solid #ccc; margin-top:0px; padding-top:0px;float: left;' id='row_act" + $row_act + "'><td>" +
+                "<label>Notes</label></td>" +
+                "<td><textarea  name='notes[]' class='form-control' rows='3' cols='50'></textarea></td></tr>");
+        }
 
-        $rowout = $rowout + 1;
+        function delete_row_act(row_act) {
+            $('#' + $row_act).remove();
+        }
 
 
-        $("#employee_table tr:last").after("<tr style='border-top: 1px solid #ccc; margin-top:0px; padding-top:0px;float: left;' id='row_out" + $rowout + "'>" +
-            "<td><h3>Comment</h3>" +
-            "<textarea  class='form-control' name='comment[]' rows='4' cols='50'></textarea>" +
-            "</td>" +
-            "<td>" +
-            "<input type='button' value='X' class='col2-buttonX' onclick=delete_row_out('row_out" + $rowout + "')>" +
-            "<td>" +
-            "<input type='button' onclick='add_row();' value='+ Add Take' class='col2-button'></td></tr>");
-    }
+        function add_ver() {
+            $row_ver = $("#employee_table_ver tr").length;
+            $row_ver = $row_ver + 1;
+            $("#employee_table tr:last").after("<tr style='border-top: 1px solid #ccc; margin-top:0px; padding-top:0px;float: left;' id='row" + $row_ver + "'>" +
+                "<td><label>Text:</label></td><td><textarea  name='name[]' rows='7' cols='50'> </textarea></td><td><label>Upload Files:</label></td><td><input type='file' id='myFile' name='filename'></td><td><input type='button' value='X' class='col2-buttonX' onclick=delete_row_ver('row" + $row_ver + "')></td></tr>");
+        }
 
-    function delete_row_out(rowno) {
-        $('#' + rowno).remove();
-    }
+        function delete_row_ver(row_ver) {
+            $('#' + $row_ver).remove();
+        }
+
+
+        function add_row_outcome() {
+            $rowout = $("#employee_table_outcome tr").length;
+
+            $rowout = $rowout + 1;
+
+
+            $("#employee_table tr:last").after("<tr style='border-top: 1px solid #ccc; margin-top:0px; padding-top:0px;float: left;' id='row_out" + $rowout + "'>" +
+                "<td><h3>Comment</h3>" +
+                "<textarea  class='form-control' name='comment[]' rows='4' cols='50'></textarea>" +
+                "</td>" +
+                "<td>" +
+                "<input type='button' value='X' class='col2-buttonX' onclick=delete_row_out('row_out" + $rowout + "')>" +
+                "<td>" +
+                "<input type='button' onclick='add_row();' value='+ Add Take' class='col2-button'></td></tr>");
+        }
+
+        function delete_row_out(rowno) {
+            $('#' + rowno).remove();
+        }
 
 
 
 
 
 
-</script>
+    </script>
 
 
 </body>

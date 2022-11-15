@@ -3,7 +3,7 @@ if (isset($_POST['report_init'])){
 
     $rtitle=$_POST['title'];
     $objectives=htmlentities($_POST['editor2'], ENT_COMPAT);
-    $preparedby=$_SESSION['adminID'];
+    $preparedby=preparedby($_SESSION['adminID']);
     $date=date("Y-m-d H:i:s");
 
     if (!empty($rtitle)||!empty($objectives)||!empty($preparedby)) {

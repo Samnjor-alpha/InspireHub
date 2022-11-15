@@ -2,6 +2,7 @@
 include '../admincontrollers/authcontrollers.php';
 include '../admincontrollers/helper.php';
 include '../admincontrollers/session.php';
+include '../admincontrollers/viewreports.php';
 
 ?>
 <!DOCTYPE html>
@@ -50,7 +51,53 @@ include '../admincontrollers/session.php';
                         <div class="row">
                             <?php include '../adminbars/reportsbar.php' ?>
                             <div class="col-7 col-sm-9">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Reports</h3>
 
+
+                                            </div>
+                                            <!-- /.card-header -->
+                                            <div class="card-body">
+                                                <table id="example" class="table table-striped" style="width:100%">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Report Title</th>
+                                                        <th>Prepared By</th>
+                                                        <th>Date prepared</th>
+                                                        <th style="width: 40px">Action</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <?php
+                                                    $i=1;
+
+
+                                                    while ($row=mysqli_fetch_assoc($reports)) {?>
+                                                    <tr>
+                                                        <td><?= $i ?></td>
+                                                        <td><?= $row['rprt_title'] ?></td>
+                                                        <td><?= $row['prepared_by']; ?></td>
+                                                        <td><?php checkreportdate($row['created_at']); ?></td>
+                                                        <td><a href="report.php?id=<?= $row['id']?>" class="btn  btn-sm btn-success">View</a></td>
+                                                    </tr>
+<?php  $i++;} ?>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- /.card-body -->
+                                        </div>
+
+                                        <!-- /.card -->
+
+
+                                        <!-- /.card -->
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
 

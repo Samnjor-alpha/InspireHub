@@ -53,6 +53,7 @@
                     active('engagements.php');
                     active('addreport.php');
                     active('viewreport.php');
+                    active('report.php');
                     active('addreports.php'); ?>">
                         <i class="nav-icon far fa-file-pdf"></i>
                         <p>

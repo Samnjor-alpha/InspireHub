@@ -76,6 +76,11 @@ include 'admincontrollers/authcontrollers.php';
                     </div>
                     <!-- /.col -->
                 </div>
+                <div class="row">
+                    <div class="col-8">
+                        <a href="signup.php"> <small>Create Account</small></a>
+                    </div>
+                </div>
             </form>
 
 <?php } ?>
