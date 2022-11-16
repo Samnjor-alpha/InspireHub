@@ -76,7 +76,7 @@ function checkworkemail($email): bool
 {
     
         $static=Array('sales@inspirehub.co.ke','production@inspirehub.co.ke'
-        ,'support@inspirehub.co.ke','md@inspirehub.co.ke', 'technical@nspirehub.co.ke');
+        ,'support@inspirehub.co.ke','md@inspirehub.co.ke', 'technical@inspirehub.co.ke');
 
 
 

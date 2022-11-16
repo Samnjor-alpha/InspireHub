@@ -48,8 +48,8 @@ include '../admincontrollers/session.php';
                 <div id="layoutSidenav_content">
                     <main>
                         <div class="container-fluid">
-
-                            <div class="row mb-2">
+<?php include '../adminbars/clientsbar.php' ?>
+                            <div class="row  mt-2 mb-2">
                                 <div class="col-2">
                                     <button class="btn btn-sm btn-success" data-toggle="modal" data-target="#addclient">Add Client</button>
                                 </div>

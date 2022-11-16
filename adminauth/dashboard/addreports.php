@@ -106,8 +106,8 @@ include '../admincontrollers/session.php';
 
                                             <label>Company</label>
                                             <input id="" name="comp_name[]" class="form-control" placeholder="Company/Organization" required>
-                                            <label>Contact Person:</label>
-                                            <input class="form-control" id="" name="contact_name[]" placeholder="contact Person" required>
+                                            <label>Contact Person(i.e <code>0712345678</code>):</label>
+                                            <input class="form-control" type="tel" pattern="[0-9]{1}[0-9]{9}" id="" name="contact_name[]" placeholder="contact Person" required>
                                             <label>Date</label>
                                             <input type="date" id=""  class="form-control" name="date_met[]" required>
                                         </div>
@@ -165,8 +165,8 @@ include '../admincontrollers/addreport.php';
             "<br> <label>company Name</label>" +
             
             "<input id='' name='comp_name[]' class='form-control' placeholder='Company/Organization'>" +
-            "<label>Contact Person:</label>" +
-            "<input  name='contact_name[]' class='form-control'  placeholder='Contact person'><br>" +
+            "<label>Contact Person(i.e <code>0712345678</code>):</label>" +
+            "<input type='tel' pattern='[0-9]{1}[0-9]{9}' name='contact_name[]' class='form-control'  placeholder='Contact person'><br>" +
             "<label>Date</label><input type='Date' class='form-control' id='' name='date_met[]' placeholder='Date' />" +
             "</td>" +
             "<td style='padding-left:8%;'>" +

@@ -20,7 +20,7 @@ toastr.error('Select a company to fill the engagements');
         </script>";
     } else {
 $notes=implode($notes);
-$movs=implode($movs);
+$movs=implode(',',$movs);
 $take=implode($take);
 
 

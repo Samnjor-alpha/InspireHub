@@ -30,12 +30,13 @@ toastr.error('Password do not match','Password Mismatch');
 }else{
     $hash=password_hash($pwd,PASSWORD_DEFAULT);
     $today =date('Y-m-d H:i:s');
-    $add="insert into admins set names='$fnames',email='$work_mail',p_email='$pers_email',role='admin',password='$hash',created_at='$today'";
+    $add="insert into admins set names='$fnames',email='$work_mail',p_email='$pers_email',role='admin',password='$hash',created_at='$today',last_login='$today'";
     if (mysqli_query($conn,$add)){
         $_SESSION['adminID']=mysqli_insert_id($conn);
         $_SESSION['role'] = 'admin';
         $_SESSION['Anames'] =$fnames;
         $_SESSION['Aemail'] =$work_mail;
+
         echo "<script>
 toastr.success('Account created successfully.');
 window.location.href='dashboard/dashboard.php';

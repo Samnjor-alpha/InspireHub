@@ -2,6 +2,7 @@
 include '../admincontrollers/authcontrollers.php';
 include '../admincontrollers/helper.php';
 include '../admincontrollers/session.php';
+include '../admincontrollers/viewusers.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,147 +45,38 @@ include '../admincontrollers/session.php';
         <!-- Main content -->
         <div class="content">
             <div class="container-fluid">
-                <div class="page-contents mt-2">
-                    <div class="row">
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-info">
-                                <div class="inner">
-                                    <h3>150</h3>
-
-                                    <p>Clients</p>
-                                </div>
-                                <div class="icon">
-
-                                    <i class="ion ion-ios-people"></i>
-                                </div>
-                                <a href="clients.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- ./col -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-success">
-                                <div class="inner">
-                                    <h3>5</h3>
-
-                                    <p>Users</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-person-stalker"></i>
-                                </div>
-                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- ./col -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-warning">
-
-                                <div class="inner">
-                                    <h3>44</h3>
-
-                                    <p>Subscribers</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-person-add"></i>
-                                </div>
-                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- ./col -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-danger">
-                                <div class="inner">
-                                    <h3>65</h3>
-
-                                    <p>Quot. Requests</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fas fa-file-invoice"></i>
-                                </div>
-                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- ./col -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-user-tie mr-1"></i>
+                        Users
                     </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                <tr>
 
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Recent Reports</h3>
+                                    <th>Name</th>
+                                    <th>Work Email</th>
+                                    <th>Personal Email</th>
+                                    <th>Last Login</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
 
+                                <tbody>
+                                <?php while($row=mysqli_fetch_assoc($getusers)){ ?>
+                                <tr>
+                                    <td><?= $row['names'] ?></td>
+                                    <td><?= $row['email'] ?></td>
+                                    <td><?= obfuscate_email($row['p_email']) ?></td>
+                                    <td><?= date('Y-m-d H:i:s A',strtotime($row['last_login']))?></td>
+                                    <td><button class="btn btn-sm btn-success">View</button></td>
+                                    <?php } ?>
+                                </tr>
 
-                                </div>
-                                <!-- /.card-header -->
-                                <div class="card-body p-0">
-                                    <table class="table">
-                                        <thead>
-                                        <tr>
-                                            <th style="width: 10px">#</th>
-                                            <th>Report Title</th>
-                                            <th>Prepared By</th>
-                                            <th>Date prepared</th>
-                                            <th style="width: 40px">Action</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>1.</td>
-                                            <td>KODI Represent</td>
-                                            <td>Lattifah Milkah</td>
-                                            <td>Today</td>
-                                            <td><button class="btn  btn-sm btn-success">View</button></td>
-                                        </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- /.card-body -->
-                            </div>
-
-                            <!-- /.card -->
-
-
-                            <!-- /.card -->
-                        </div>
-                        <div class="col-md-4">
-                            <!-- Info Boxes Style 2 -->
-                            <div class="info-box mb-3 bg-primary">
-                                <span class="info-box-icon">
-                                <i class="fas fa-mouse-pointer"></i>
-                                </span>
-
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Daily Visits</span>
-                                    <span class="info-box-number">92,050</span>
-                                </div>
-                                <!-- /.info-box-content -->
-                            </div>
-                            <div class="info-box mb-3 bg-success">
-                                <span class="info-box-icon">
-                                <i class="fas fa-mouse-pointer"></i>
-                                </span>
-
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Monthly Visits</span>
-                                    <span class="info-box-number">112,050</span>
-                                </div>
-                                <!-- /.info-box-content -->
-                            </div>
-
-                            <div class="info-box mb-3 bg-info">
-                                <span class="info-box-icon"><i class="fas fa-file-pdf"></i></span>
-
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Reports</span>
-                                    <span class="info-box-number">23</span>
-                                </div>
-                                <!-- /.info-box-content -->
-                            </div>
-
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
