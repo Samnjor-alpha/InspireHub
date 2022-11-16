@@ -15,7 +15,7 @@ toastr.error('invalid email formats','Invalid Email');
     echo "<script>
 toastr.error('Use the work email provided','Unknown Work Email');
 </script>";
-}elseif(checkworkemail($work_mail)){
+}elseif(!checkworkemail($work_mail)){
     echo "<script>
 toastr.error('The work email does not exist','Unknown Work Email');
 </script>";
