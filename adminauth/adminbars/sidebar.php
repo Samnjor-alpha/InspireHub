@@ -75,7 +75,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="mailings.php" class="nav-link <?php active('mailings.php'); ?>">
+                    <a href="mailings.php" class="nav-link <?php
+                    active('sendmail.php');
+                    active('mailings.php'); ?>">
                         <i class="nav-icon fas fa-mail-bulk"></i>
                         <p>
                      Mail List

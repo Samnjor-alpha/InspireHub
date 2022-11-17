@@ -2,6 +2,7 @@
 include '../admincontrollers/authcontrollers.php';
 include '../admincontrollers/helper.php';
 include '../admincontrollers/session.php';
+include '../admincontrollers/clientscontroller.php';
 
 ?>
 <!DOCTYPE html>
@@ -64,26 +65,31 @@ include '../admincontrollers/session.php';
                                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                             <thead>
                                             <tr>
-
+                                                <th>#</th>
                                                 <th>Name</th>
                                                 <th>Contact</th>
-                                                <th>Location</th>
+                                                <th>Industry</th>
                                                 <th>Added</th>
                                                 <th>Action</th>
                                             </tr>
                                             </thead>
 
                                             <tbody>
+                                 <?php
+                                 $i=1;
+                                 while ($rowc=mysqli_fetch_assoc($getclients)){ ?>
                                             <tr>
-                                                <td>Glamour</td>
-                                                <td>Email:glamoaur@email.com
+                                                <td><?= $i ?></td>
+                                                <td><i class="far fa-user"></i> : <?= $rowc['names'] ?></td>
+                                                <td><i class="fas fa-envelope-square"></i> : <?= $rowc['email'] ?>
                                                     <br>
-                                                Tel:+254874152</td>
-                                                <td>Nairobi</td>
-                                                <td>22<sup>th</sup>/01/2022</td>
+                                                    <i class="fas fa-phone-square-alt"></i> : <?= $rowc['tel_no'] ?></td>
+                                                <td><i class="fas fa-industry"></i> : <?= $rowc['industry'] ?></td>
+                                                <td><i class="fas fa-calendar-day"></i> : <?= date('D, d.M.Y',strtotime($rowc['added_at'])) ?></td>
                                                 <td><button class="btn btn-sm btn-success">View</button></td>
                                             </tr>
-
+<?php  $i++;
+                                 }?>
                                             </tbody>
                                         </table>
                                     </div>
@@ -108,6 +114,7 @@ include '../admincontrollers/session.php';
 <!-- REQUIRED SCRIPTS -->
 <?php include '../adminstyles/scripts.php';
 include '../adminmodals/addclient.php';
+include '../admincontrollers/addclient.php';
 ?>
 
 </body>

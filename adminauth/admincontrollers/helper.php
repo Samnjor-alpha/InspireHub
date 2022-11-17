@@ -1,4 +1,32 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+require 'vendor/phpmailer/phpmailer/src/Exception.php';
+require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require 'vendor/phpmailer/phpmailer/src/SMTP.php';
+require 'vendor/autoload.php';
+/**
+ * @throws \PHPMailer\PHPMailer\Exception
+ */
+function getMail(): PHPMailer
+{
+    $mail = new PHPMailer;
+    $mail->isSMTP();
+    $mail = new PHPMailer(true);
+
+
+    $mail->IsSMTP();
+    $mail->SMTPDebug = 4;
+    $mail->SMTPAuth = EMAIL_SMTP_AUTH;
+    $mail->SMTPSecure = EMAIL_SMTP_ENCRYPTION;
+    $mail->Host = EMAIL_SMTP_HOST;
+    $mail->Port = EMAIL_SMTP_PORT; // or 587
+
+    $mail->Username = EMAIL_SMTP_USERNAME;
+    $mail->Password = EMAIL_SMTP_PASSWORD;
+
+
+    return $mail;
+}
 function active($currect_page): void
 {
     $url_array =  explode('/', $_SERVER['PHP_SELF']) ;
@@ -15,7 +43,8 @@ function preparedby($prepared_by)
     return mysqli_fetch_assoc($getuser)['names'];
 
 }
-function checkreportdate($rprtDate){
+function checkreportdate($rprtDate): void
+{
     $current = strtotime(date("Y-m-d"));
     $date    = strtotime($rprtDate);
 
