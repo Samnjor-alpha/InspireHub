@@ -60,7 +60,7 @@ include '../admincontrollers/subscribers.php'
                                         <div class="col-6">
                                             <fieldset class="form-group">
                                                 <span class="item-text small"><label for="all"><i class="fas fa-users fa-2x"></i></label></span>
-                                                <input class="all" type="checkbox" title="send to all" name="send_" value="all" />
+                                                <input class="all" type="checkbox"  checked title="send to all" name="send_" value="all" />
 
                                             </fieldset>
 
@@ -76,17 +76,45 @@ include '../admincontrollers/subscribers.php'
                                     </div>
 
                                     <div id="to" class="form-group">
+                                        <label for="to">All Subscribers</label>
                                         <input id="to"  type="text"
                                                name="emails[]"
                                                data-role="tagsinput"
                                                required
                                                value="<?php
-                                                   if (isset($_POST['emails'])){
-                                                 echo  implode(',',$_POST['emails']);
-                                                   } ?>"
+
+                                                   echo implode(',',getallmails());
+                                                   ?>"
                                                class="form-control"
                                                placeholder="To:">
                                     </div>
+                                    <?php if (checknewsubscriber()){ ?>
+                                    <div id="new_add" style="display:none" class="form-group">
+                                        <label for="to">New Subscribers</label>
+                                        <input id="to"  type="text"
+                                               name="emails[]"
+                                               data-role="tagsinput"
+                                               required
+                                               value="<?php
+
+                                               echo implode(',',getnewmails());
+                                               ?>"
+                                               class="form-control"
+                                               placeholder="To:">
+                                    </div>
+                                    <?php  }else{?>
+                                        <div id="new_add" style="display:none" class="form-group">
+                                            <label for="to">Recipients</label>
+                                            <input id="to"  type="text"
+                                                   name="emails[]"
+                                                   data-role="tagsinput"
+                                                   required
+
+                                                   class="form-control"
+                                                   placeholder="To:">
+                                        </div>
+
+                                    <?php } ?>
                                     <div class="form-group">
                                         <input class="form-control" name="subject"   placeholder="Subject:">
                                     </div>
@@ -123,19 +151,25 @@ include '../admincontrollers/sendmailer.php';
     $("#to").show();
     $(".all").click(function() {
         if($(this).is(":checked")) {
-            $("#to").hide();
             $(".new").prop("checked", false);
-        } else {
+            $("#new_add").hide()
             $("#to").show();
+        }else {
+            $(".new").prop("checked", true);
+            $("#new_add").show()
+            $("#to").hide();
 
         }
     });
     $(".new").click(function() {
         if($(this).is(":checked")) {
             $("#to").hide();
+            $("#new_add").show()
             $(".all").prop("checked", false);
         } else {
             $("#to").show();
+            $("#new_add").hide();
+            $(".all").prop("checked", true);
 
         }
     });

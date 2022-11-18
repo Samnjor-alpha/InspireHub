@@ -16,7 +16,7 @@ function getnewmails(): array
 
     global $conn;
 
-    $getemails=mysqli_query($conn,"select email from subscribers");
+    $getemails=mysqli_query($conn,"select email from subscribers where status='0'");
 
     $returnData = array(); // Simply do this. Don't need all index fields
     $index = 0;

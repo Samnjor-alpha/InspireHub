@@ -5,7 +5,6 @@ require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require 'vendor/phpmailer/phpmailer/src/SMTP.php';
 require 'vendor/autoload.php';
 /**
- * @throws \PHPMailer\PHPMailer\Exception
  */
 function getMail(): PHPMailer
 {
@@ -15,7 +14,7 @@ function getMail(): PHPMailer
 
 
     $mail->IsSMTP();
-    $mail->SMTPDebug = 4;
+    $mail->SMTPDebug =false;
     $mail->SMTPAuth = EMAIL_SMTP_AUTH;
     $mail->SMTPSecure = EMAIL_SMTP_ENCRYPTION;
     $mail->Host = EMAIL_SMTP_HOST;
@@ -129,5 +128,15 @@ function verifyworkmail($email): bool
         return false;
     }else{
         return true;
+    }
+}
+function checkifsubemailexists($email): bool
+{
+    global $conn;
+    $getdata=mysqli_query($conn,"select * from subscribers where email='$email'");
+    if (mysqli_num_rows($getdata)>0){
+        return true;
+    }else{
+        return false;
     }
 }
