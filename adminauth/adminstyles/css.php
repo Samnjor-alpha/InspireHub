@@ -30,6 +30,7 @@
 <link rel="stylesheet" href="<?php echo BASE_URL ?>adminauth/plugins/dropzone/min/dropzone.min.css">
 <!-- Theme style -->
 <link rel="stylesheet" href="<?php echo BASE_URL ?>adminauth/dist/css/adminlte.css">
+<link rel="stylesheet" href="<?php echo BASE_URL ?>adminauth/dist/css/tick.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/<?php echo BASE_URL ?>adminauth/dist/css/bootstrap.min.css">
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/<?php echo BASE_URL ?>adminauth/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/<?php echo BASE_URL ?>adminauth/dist/umd/popper.min.js"></script>

@@ -4,6 +4,6 @@
         active('management.php') ?>" href="management.php"  role="tab" aria-controls="vert-tabs-home"><i class="fas fa-plus-circle"></i> Add Product</a>
         <a class="nav-link <?php
 
-        active('sendmail.php');?>"  id="vert-tabs-profile-tab"  href="viewproducts.php" role="tab" aria-controls="vert-tabs-profile" aria-selected="false"><i class="fab fa-product-hunt"></i> Products</a>
+        active('viewproducts.php');?>"  id="vert-tabs-profile-tab"  href="viewproducts.php" role="tab" aria-controls="vert-tabs-profile" aria-selected="false"><i class="fab fa-product-hunt"></i> Products</a>
 
     </div>

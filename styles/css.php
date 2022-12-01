@@ -31,6 +31,8 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 <link href="assets/css/style.css" rel="stylesheet">
+<script type="text/javascript" src="visitson.php"></script>
+
 <script>
     toastr.options = {
         "debug": false,

@@ -46,58 +46,46 @@ include '../admincontrollers/addproductcontroller.php';
         <!-- Main content -->
         <div class="content">
             <div class="container-fluid">
-<?php include '../adminbars/managementbars.php'?>
+                <?php include '../adminbars/managementbars.php'?>
                 <div class="row mt-3">
-<div class="col-3 co-sm-5">
-    <?php include '../adminbars/productbar.php'?>
-</div>
+                    <div class="col-3 co-sm-5">
+                        <?php include '../adminbars/productbar.php'?>
+                    </div>
                     <div class="offset-1 col-9 col-sm-7">
-                        <form method="POST" action="" class="g-3 mb-4" enctype="multipart/form-data">
+                        <div class="container page-wrapper">
+                            <div class="page-inner">
+                                <div class="row">
+<?php while ($rowp=mysqli_fetch_assoc($getproducts)){ ?>
+                                    <div class="el-wrapper">
+                                        <div class="box-up">
+                                            <img class="img img-fluid"  src="<?php echo BASE_URL."adminauth/dashboard/uploads/".getproductimg($rowp['id']); ?>" alt="">
+                                            <div class="img-info">
+                                                <div class="info-inner">
+                                                    <span class="p-name"><?= $rowp['pname'] ?></span>
+                                                    <br>
+                                                    <span class="p-company"><?= getproductcategory($rowp['pcateg'])?></span>
+                                                </div>
+                                                <div class="a-size">Viewed : <span class="size"><?= $rowp['pviews'] ?></span></div>
+                                            </div>
+                                        </div>
 
-                            <div class="form-group">
-                                <label for="product">Product Name</label>
-                                    <input type="text" id="product" name="pname" class="form-control" placeholder="Product Name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="product">Category</label>
-                                <select  id="product" name="pcateg" class="form-control form-select" required>
-                                    <option selected disabled>Select product category</option>
-                                    <option>Web App</option>
-                                    <option>Mobile App</option>
-                                </select>
-                            </div>
+                                        <div class="box-down">
+                                            <div class="h-bg">
+                                                <div class="h-bg-inner"></div>
+                                            </div>
 
-                            <div class="form-group">
-                                <label for="product">Project Demo link</label>
-                                <input type="url" id="product" name="purl" class="form-control" placeholder="https://www.demo.com">
-                            </div>
-
-
-                            <div class="form-group">
-<label for="tags">Description</label>
-                                    <textarea id="tags" name="editor2" required></textarea>
-
-                            </div>
-
-                            <div class="upload__box">
-                                <div class="upload__btn-box">
-                                    <label class="upload__btn">
-                                       Upload images <i class="fas fa-images"></i>
-                                        <input type="file" multiple="" data-max_length="4" accept="image/*" name="images[]" class="upload__inputfile" required>
-                                    </label>
+                                            <a class="cart" href="../../portfolio-details.php">
+                                                <span class="price"><?= $rowp['pcateg'] ?></span>
+                                                <span class="add-to-cart">
+              <span class="txt">Manage</span>
+            </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <?php } ?>
                                 </div>
-                                <div class="upload__img-wrap"></div>
                             </div>
-
-
-
-                            <div class="text-center">
-                                <button name="addproduct" class="btn btn-primary">Add Product</button>
-                            </div>
-
-
-
-                        </form>
+                        </div>
                     </div>
 
 
@@ -116,7 +104,7 @@ include '../admincontrollers/addproductcontroller.php';
 
 <!-- REQUIRED SCRIPTS -->
 <?php include '../adminstyles/scripts.php';
-    include '../adminstyles/addproduct.php';
+include '../adminstyles/addproduct.php';
 ?>
 <script>
     jQuery(document).ready(function () {

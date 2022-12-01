@@ -1,4 +1,6 @@
-<?php include 'database/config.php'; ?>
+<?php include 'database/config.php';
+include_once("adminauth/dashboard/counter.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +13,8 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
 <?php include 'navbars/topbar.php' ?>
+
+
   </header>
   <!-- ======= Hero Section ======= -->
  <?php include 'layouts/hero.php' ?>
@@ -57,6 +61,7 @@
   <!-- Vendor JS Files -->
 <?php include 'styles/scripts.php'?>
   <?php include 'controllers/requestquote.php' ?>
+
 </body>
 
 </html>

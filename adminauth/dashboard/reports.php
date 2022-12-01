@@ -82,7 +82,7 @@ include '../admincontrollers/viewreports.php';
                                                         <td><?= $row['rprt_title'] ?></td>
                                                         <td><?= $row['prepared_by']; ?></td>
                                                         <td><?php checkreportdate($row['created_at']); ?></td>
-                                                        <td><a href="report.php?id=<?= $row['id']?>" class="btn  btn-sm btn-success">View</a></td>
+                                                        <td><a href="report.php?id=<?= $row['id']?>"><i class="fas fa-eye" title="View"></i></a>|<a href="addreports.php?id=<?= $row['id']?>"><i class="fas fa-edit" title="Edit"></i></a></td>
                                                     </tr>
 <?php  $i++;} ?>
                                                     </tbody>

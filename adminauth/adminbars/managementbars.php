@@ -3,6 +3,7 @@
 
         <a class="nav-link <?php
         active('management.php');
+        active('viewproducts.php');
        ?>" href="management.php">Products</a>
     </li>
 
