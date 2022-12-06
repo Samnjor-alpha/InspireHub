@@ -83,7 +83,7 @@ include '../admincontrollers/addproductcontroller.php';
                                 <div class="upload__btn-box">
                                     <label class="upload__btn">
                                        Upload images <i class="fas fa-images"></i>
-                                        <input type="file" multiple="" data-max_length="4" accept="image/*" name="images[]" class="upload__inputfile" required>
+                                        <input type="file" multiple="" data-max_length="20" accept="image/*" name="images[]" class="upload__inputfile" required>
                                     </label>
                                 </div>
                                 <div class="upload__img-wrap"></div>

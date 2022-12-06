@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/InspireHub.iml" filepath="$PROJECT_DIR$/.idea/InspireHub.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../nofyl/.idea/nofyl.iml" filepath="$PROJECT_DIR$/../nofyl/.idea/nofyl.iml" />
     </modules>
   </component>
 </project>

@@ -3,7 +3,7 @@
 
         <div class="section-title">
             <h2>Our Works</h2>
-            <p>Check our Portfolio</p>
+            <p>Check our Products</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -16,6 +16,8 @@
             </div>
         </div>
 
+
+      <?php  if (mysqli_num_rows($getproducts)<1){ ?>
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
@@ -119,6 +121,27 @@
             </div>
 
         </div>
+        <?php }else{
+            while($rowp=mysqli_fetch_assoc($getproducts)){
+            ?>
+            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-4 col-md-6 portfolio-item <?= getfilter($rowp['pcateg']) ?>">
+                    <div class="portfolio-wrap">
+                        <img src="adminauth/dashboard/uploads/<?= getproductimg($rowp['id']) ?>"  class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><?= $rowp['pname'] ?></h4>
+                            <p><?= $rowp['pcateg'] ?></p>
+                            <div class="portfolio-links">
+                                <a href="adminauth/dashboard/uploads/<?= getproductimg($rowp['id']) ?>" data-gallery="portfolioGallery" class="portfolio-lightbox"  title="<?= $rowp['pname'] ?>"><i class="fas fa-eye"></i></a>
+                                <a  href="portfolio-details.php?product=<?= password_hash($rowp['id'],PASSWORD_DEFAULT); ?>&&id=<?= $rowp['id']?>" title="More Details"><i class="bx bx-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php } } ?>
+            </div>
+
 
     </div>
+
 </section><!-- End Portfolio Section -->

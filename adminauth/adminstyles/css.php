@@ -31,11 +31,6 @@
 <!-- Theme style -->
 <link rel="stylesheet" href="<?php echo BASE_URL ?>adminauth/dist/css/adminlte.css">
 <link rel="stylesheet" href="<?php echo BASE_URL ?>adminauth/dist/css/tick.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/<?php echo BASE_URL ?>adminauth/dist/css/bootstrap.min.css">
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/<?php echo BASE_URL ?>adminauth/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/<?php echo BASE_URL ?>adminauth/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/<?php echo BASE_URL ?>adminauth/dist/js/bootstrap.bundle.min.js"></script>
-
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <!-- Vendor CSS Files -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />

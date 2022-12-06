@@ -1,5 +1,6 @@
 <?php include 'database/config.php';
-include_once("adminauth/dashboard/counter.php");
+include_once "adminauth/dashboard/counter.php";
+include 'adminauth/admincontrollers/addproductcontroller.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -8,10 +8,6 @@
     </li>
 
     <li class="nav-item">
-
-        <a class="nav-link <?php active('contacts.php');?>" href="contacts.php">Contacts</a>
-    </li>
-    <li class="nav-item">
             <a class="nav-link <?php active('aboutus.php');?>" href="aboutus.php">About Us</a>
         </li>
 

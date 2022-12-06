@@ -97,7 +97,8 @@
                 <li class="nav-item">
                     <a href="management.php" class="nav-link <?php
                     active('viewproducts.php');
-                    active('management.php'); ?>">
+                    active('management.php');
+                    active('aboutus.php');?>">
                         <i class="nav-icon fas fa-blog"></i>
                         <p>
                             Web  Management
