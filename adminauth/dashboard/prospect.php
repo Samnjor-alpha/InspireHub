@@ -56,7 +56,7 @@ include '../admincontrollers/prospects.php';
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-user-tie mr-1"></i>
-                             Prospects
+                                Prospects
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -73,13 +73,13 @@ include '../admincontrollers/prospects.php';
 
                                         <tbody>
                                         <?php while ($rowp=mysqli_fetch_assoc($prospects)){ ?>
-                                        <tr>
-                                            <td><?= $rowp['company'] ?></td>
-                                            <td><?= $rowp['contact_person'] ?></td>
-                                            <td><?=  date('D, d.M.Y',strtotime($rowp['meet_date']))?></td>
-                                            <td><a href="prospect.php?prospect=<?= $rowp['contact_person']?>" class="btn btn-sm btn-success">View</a></td>
-                                        </tr>
-<?php  } ?>
+                                            <tr>
+                                                <td><?= $rowp['company'] ?></td>
+                                                <td><?= $rowp['contact_person'] ?></td>
+                                                <td><?=  date('D, d.M.Y',strtotime($rowp['meet_date']))?></td>
+                                                <td><a href="prospect.php?prospect=<?= $rowp['contact_person']?>" class="btn btn-sm btn-success">View</a></td>
+                                            </tr>
+                                        <?php  } ?>
                                         </tbody>
                                     </table>
                                 </div>

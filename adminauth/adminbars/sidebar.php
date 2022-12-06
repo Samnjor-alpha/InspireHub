@@ -42,7 +42,8 @@
                 <li class="nav-item">
                     <a href="clients.php" class="nav-link <?php
                     active('prospects.php');
-                    active('clients.php'); ?>">
+                    active('clients.php');
+                    active('prospect.php');?>">
                         <i class="nav-icon fas fa-user-tie"></i>
                         <p>
                              Clients
