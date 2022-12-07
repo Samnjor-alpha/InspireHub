@@ -52,7 +52,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="addreports.php" class="nav-link <?php active('reports.php');
+                    <a href="reports.php" class="nav-link <?php active('reports.php');
                     active('engagements.php');
                     active('addreport.php');
                     active('viewreport.php');

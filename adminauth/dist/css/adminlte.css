@@ -53456,3 +53456,51 @@ body {
     text-transform: uppercase;
     white-space: nowrap;
 }
+ .testimonial-item {
+    text-align: center;
+
+}
+
+ .testimonial-item .testimonial-img {
+    width: 100px;
+    border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.15);
+    margin: 0 auto;
+}
+
+ .testimonial-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+
+}
+
+ .testimonial-item h4 {
+    font-size: 14px;
+     margin: 0 0 15px 0;
+}
+
+ .testimonial-item .quote-icon-left,
+ .testimonial-item .quote-icon-right {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 26px;
+}
+
+ .testimonial-item .quote-icon-left {
+    display: inline-block;
+    left: -5px;
+    position: relative;
+}
+
+ .testimonial-item .quote-icon-right {
+    display: inline-block;
+    right: -5px;
+    position: relative;
+    top: 10px;
+}
+
+ .testimonial-item p {
+    font-style: italic;
+    margin: 0 auto 15px auto;
+
+}

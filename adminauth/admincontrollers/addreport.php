@@ -18,8 +18,9 @@ if (isset($_POST['report_init'])){
             foreach ($_POST['comp_name'] as $key => $value) {
                 $company = $value;
                 $contact = $_POST['contact_name'][$key];
+                $name = $_POST['cname'][$key];
                 $datem = date('Y-m-d',strtotime($_POST['date_met'][$key]));
-                $sql = mysqli_query($conn,"INSERT INTO prospects set company='$company',contact_person='$contact',meet_date='$datem',report_id='$reportid'");
+                $sql = mysqli_query($conn,"INSERT INTO prospects set company='$company',contact_person='$contact',contact_name='$name',meet_date='$datem',report_id='$reportid'");
 
 
             }
@@ -52,9 +53,10 @@ if (isset($_POST['report_update'])){
             foreach ($_POST['comp_name'] as $key => $value) {
                 $company = $value;
                 $contact = $_POST['contact_name'][$key];
+                $name=$_POST['cname'][$key];
                 $pid=$_POST['pros_id'][$key];
                 $datem = date('Y-m-d',strtotime($_POST['date_met'][$key]));
-                $sql = mysqli_query($conn,"update prospects set company='$company',contact_person='$contact',meet_date='$datem' where id='$pid'");
+                $sql = mysqli_query($conn,"update prospects set company='$company',contact_person='$contact',contact_name='$name',meet_date='$datem' where id='$pid'");
 
 
             }
@@ -64,5 +66,16 @@ toastr.info('Updated successfully.','Report Updated');
 window.location.href='$location';
 </script>";
         }
+    }
+}
+
+if (isset($_GET['delete'])){
+    $del_report="delete from reports where id='".$_GET['delete']."'";
+    if (mysqli_query($conn,$del_report)){
+        mysqli_query($conn,"delete from prospects where report_id='".$_GET['delete']."'");
+        echo"<script>
+toastr.info('Report Deleted successfully','Deleted Successfully');
+window.location.href='reports.php';
+</script>";
     }
 }

@@ -1,4 +1,4 @@
-<div class="col-5 col-sm-3">
+<div class="col-3 col-sm-3">
     <div class="nav flex-column nav-tabs h-100" aria-orientation="vertical">
         <a class="nav-link <?php  active('addreports.php');
         active('viewreport.php');

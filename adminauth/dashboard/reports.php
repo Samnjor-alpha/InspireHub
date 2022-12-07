@@ -50,7 +50,7 @@ include '../admincontrollers/viewreports.php';
                         <h4>Reports</h4>
                         <div class="row">
                             <?php include '../adminbars/reportsbar.php' ?>
-                            <div class="col-7 col-sm-9">
+                            <div class="col-md-9 col-sm-9">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="card">
@@ -61,14 +61,14 @@ include '../admincontrollers/viewreports.php';
                                             </div>
                                             <!-- /.card-header -->
                                             <div class="card-body">
-                                                <table id="example" class="table table-striped" style="width:100%">
+                                                <table id="example" class="table table-striped " style="width:100%">
                                                     <thead>
                                                     <tr>
                                                         <th>#</th>
                                                         <th>Report Title</th>
                                                         <th>Prepared By</th>
                                                         <th>Date prepared</th>
-                                                        <th style="width: 40px">Action</th>
+                                                        <th>Action</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -82,7 +82,13 @@ include '../admincontrollers/viewreports.php';
                                                         <td><?= $row['rprt_title'] ?></td>
                                                         <td><?= $row['prepared_by']; ?></td>
                                                         <td><?php checkreportdate($row['created_at']); ?></td>
-                                                        <td><a href="report.php?id=<?= $row['id']?>"><i class="fas fa-eye" title="View"></i></a>|<a href="addreports.php?id=<?= $row['id']?>"><i class="fas fa-edit" title="Edit"></i></a></td>
+                                                        <td><a href="report.php?id=<?= $row['id']?>"><i class="fas fa-eye" title="View"></i></a>|
+                                                            <a href="addreports.php?id=<?= $row['id']?>"><i class="fas fa-edit" title="Edit"></i></a>
+                                                            <?php if (enabledelete($row['created_at'])){ ?>
+                                                            |
+                                                            <a href="?delete=<?= $row['id']?>"><i class="fas fa-trash-alt text-danger    " title="Delete"></i></a>
+<?php } ?>
+                                                        </td>
                                                     </tr>
 <?php  $i++;} ?>
                                                     </tbody>
@@ -110,7 +116,7 @@ include '../admincontrollers/viewreports.php';
 </div>
 
 <!-- ./wrapper -->
-
+<?php include '../admincontrollers/addreport.php'?>
 <!-- REQUIRED SCRIPTS -->
 <?php include '../adminstyles/scripts.php' ?>
 

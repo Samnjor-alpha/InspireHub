@@ -110,6 +110,8 @@ include '../admincontrollers/reportcontroller.php'
                                                         <input type="hidden" name="pros_id[]" value="<?php echo $prospects[$k]['id'] ?? null ?>" />
                                                         <label>Company</label>
                                                         <input id="" name="comp_name[]" value="<?php echo $prospects[$k]['company'] ?? null ?>" class="form-control" placeholder="Company/Organization" required>
+                                                        <label>Contact Name</label>
+                                                        <input type="text" id="" value="<?php echo $prospects[$k]['contact_name'] ?? null ?>" placeholder='Contact Name'  class="form-control" name="cname[]" required>
                                                         <label>Contact Person(i.e <code>0712345678</code>):</label>
                                                         <input class="form-control" value="<?php echo $prospects[$k]['contact_person'] ?? null ?>" type="tel" pattern="[0-9]{1}[0-9]{9}" id="" name="contact_name[]" placeholder="contact Person" required>
                                                         <label>Date</label>
@@ -123,6 +125,8 @@ include '../admincontrollers/reportcontroller.php'
 
                                             <label>Company</label>
                                             <input id="" name="comp_name[]" class="form-control" placeholder="Company/Organization" required>
+                                            <label>Contact Name</label>
+                                            <input type="text" id="" placeholder='Contact Name'  class="form-control" name="cname[]" required>
                                             <label>Contact Person(i.e <code>0712345678</code>):</label>
                                             <input class="form-control" type="tel" pattern="[0-9]{1}[0-9]{9}" id="" name="contact_name[]" placeholder="contact Person" required>
                                             <label>Date</label>
@@ -140,7 +144,7 @@ include '../admincontrollers/reportcontroller.php'
                                             </tr>
                                         </table>
 
-<?php if (isset($_GET['id']) && !checkreport($_GET['id'])){ ?>
+<?php if (!isset($_GET['id']) && !checkreport($_GET['id'])){ ?>
                                         <input type="button" onclick="add_row();" value="+ Add Another prospect" class="btn btn-sm bg-dark">
 <?php } ?>
                                     </div>
@@ -188,6 +192,8 @@ include '../admincontrollers/addreport.php';
             "<br> <label>company Name</label>" +
             
             "<input id='' name='comp_name[]' class='form-control' placeholder='Company/Organization'>" +
+            "<label for='cname'>Contact Name</label>"+
+            <input type='text' id='cname'  class='form-control' name='cname[]' placeholder='Contact Name' required>" +
             "<label>Contact Person(i.e <code>0712345678</code>):</label>" +
             "<input type='tel' pattern='[0-9]{1}[0-9]{9}' name='contact_name[]' class='form-control'  placeholder='Contact person'><br>" +
             "<label>Date</label><input type='Date' class='form-control' id='' name='date_met[]' placeholder='Date' />" +

@@ -49,42 +49,59 @@ include '../admincontrollers/prospects.php';
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <?php include '../adminbars/clientsbar.php' ?>
+                        <?php include '../adminbars/prospectbar.php' ?>
                         <div class="row  mt-2 mb-2">
 
                         </div>
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-user-tie mr-1"></i>
-                                Prospects
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                        <thead>
-                                        <tr>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="testimonial-item">
+                                            <img src="https://ui-avatars.com/api/?name=<?= $row['company']?>&background=0D8ABC&color=fff" class="testimonial-img" alt="">
+                                            <div class="text-center text-justify mt-3">
 
-                                            <th>Company/Name</th>
-                                            <th>Contact</th>
-                                            <th>Added</th>
-                                            <th>Action</th>
-                                        </tr>
-                                        </thead>
-
-                                        <tbody>
-                                        <?php while ($rowp=mysqli_fetch_assoc($prospects)){ ?>
-                                            <tr>
-                                                <td><?= $rowp['company'] ?></td>
-                                                <td><?= $rowp['contact_person'] ?></td>
-                                                <td><?=  date('D, d.M.Y',strtotime($rowp['meet_date']))?></td>
-                                                <td><a href="prospect.php?prospect=<?= $rowp['contact_person']?>" class="btn btn-sm btn-success">View</a></td>
-                                            </tr>
-                                        <?php  } ?>
-                                        </tbody>
-                                    </table>
+                                                <h4><i class="fas fa-building"></i> <?= $row['company']?></h4>
+                                                <h4><i class="fas fa-phone-square-alt"></i> <?= $row['contact_person']?> </h4>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="offset-2 col-6">
+
+<?php
+if (mysqli_num_rows($engagements)>0){
+
+while ($rowe=mysqli_fetch_assoc($engagements)){ ?>
+                                <div class="card mb-2">
+                                    <div class="card-body">
+                                        <div class="float-left">Date: <?= date('D,d.M.Y',strtotime($rowe['date_submitted'])) ?></div>
+                                        <br>
+                                        <div class="mt-2 mb-3 testimonial-item">
+                                            <p><?= $rowe['comment'] ?> </p>
+                                            <div class="row">
+<div class="col-4">
+    <h4>Take:</h4> <span><?=$rowe['take'] ?></span>
+</div>
+                                                <div class="col-4">
+                                                   <h4>Mov:</h4> <span><?=$rowe['mov'] ?></span>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h4>Notes: </h4><span><?=$rowe['notes'] ?></span>
+                                                </div></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php }}else{ ?>
+    <p class="text-center text-warning" style="margin-top:20%">No Engagements added</p>
+
+                                <?php } ?>
+                            </div>
                         </div>
+
 
                     </div>
                 </main>
