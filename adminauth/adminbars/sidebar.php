@@ -96,6 +96,15 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="applications.php" class="nav-link <?php active('applications.php'); ?>">
+                        <i class="nav-icon fas fa-business-time"></i>
+                        <p>
+                            Applications
+
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="management.php" class="nav-link <?php
                     active('viewproducts.php');
                     active('management.php');

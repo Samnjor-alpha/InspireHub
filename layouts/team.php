@@ -57,7 +57,7 @@
                     </div>
                     <div class="member-info">
                         <h4>Samuel Njoroge</h4>
-                        <span>Mobile Developer</span>
+                        <span>Mobile & Full stack Developer</span>
                     </div>
                 </div>
             </div>
@@ -79,23 +79,23 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="member" data-aos="fade-up" data-aos-delay="300">
-                    <div class="member-img">
-                        <img src="https://via.placeholder.com/600x600.png?text=Business Development" class="img-fluid" alt="">
-                        <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h4>Latifah Milkah</h4>
-                        <span>Business Development</span>
-                    </div>
-                </div>
-            </div>
+<!--            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">-->
+<!--                <div class="member" data-aos="fade-up" data-aos-delay="300">-->
+<!--                    <div class="member-img">-->
+<!--                        <img src="https://via.placeholder.com/600x600.png?text=Business Development" class="img-fluid" alt="">-->
+<!--                        <div class="social">-->
+<!--                            <a href=""><i class="bi bi-twitter"></i></a>-->
+<!--                            <a href=""><i class="bi bi-facebook"></i></a>-->
+<!--                            <a href=""><i class="bi bi-instagram"></i></a>-->
+<!--                            <a href=""><i class="bi bi-linkedin"></i></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="member-info">-->
+<!--                        <h4>Latifah Milkah</h4>-->
+<!--                        <span>Business Development</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
 
     </div>

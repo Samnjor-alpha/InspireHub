@@ -6,7 +6,7 @@ include 'adminauth/admincontrollers/addproductcontroller.php'?>
 <head>
 
 
-    <title>Inspire Hub</title>
+    <title>Inspire Hub  Limited</title>
     <?php include 'styles/css.php'?>
     <style>
         .carousel-inner img {

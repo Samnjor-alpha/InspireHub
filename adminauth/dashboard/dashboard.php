@@ -188,19 +188,24 @@ include 'getCounter.php';
 
                             <!-- /.card -->
                         </div>
-                        <div class="col-md-4">
-                            <!-- Info Boxes Style 2 -->
-                            <div class="info-box mb-3 bg-primary">
-                                <span class="info-box-icon">
-                                <i class="fas fa-mouse-pointer"></i>
-                                </span>
 
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Visits </span>
-                                    <span class="info-box-number"><p class="tick tick-flip"><?php echo $counterValue; ?></p></span>
+                        <div class="col-md-4">
+
+                                <!-- small box -->
+                                <div class="small-box bg-info">
+                                    <div class="inner">
+                                        <h3><?= getapplications()?></h3>
+
+                                        <p>Applications</p>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="fas fa-business-time"></i>
+                                    </div>
+                                    <a href="applications.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                                 </div>
-                                <!-- /.info-box-content -->
-                            </div>
+
+                            <!-- Info Boxes Style 2 -->
+
 
 
                             <div class="info-box mb-3 bg-info">
@@ -212,7 +217,17 @@ include 'getCounter.php';
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
+                            <div class="info-box mb-3 bg-primary">
+                                <span class="info-box-icon">
+                                <i class="fas fa-mouse-pointer"></i>
+                                </span>
 
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Visits </span>
+                                    <span class="info-box-number"><p class="tick tick-flip"><?php echo $counterValue; ?></p></span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
                         </div>
                     </div>
                 </div>

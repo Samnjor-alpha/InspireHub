@@ -28,6 +28,13 @@ function getquotations(){
 
     return mysqli_fetch_assoc($getdata)['requests'];
 }
+function getapplications(){
+    global $conn;
+
+    $getdata=mysqli_query($conn,"select count(*) as applications from attachments where Status='0'");
+
+    return mysqli_fetch_assoc($getdata)['applications'];
+}
 function getreports(){
     global $conn;
 

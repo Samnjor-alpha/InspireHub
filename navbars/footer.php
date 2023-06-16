@@ -5,19 +5,16 @@
 
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-info">
-                        <h3>Inspire Hub</h3>
-                        <p>
-                            Machakos-Kangundo Rd, <br>
-                            Machakos, Kenya<br>
-                            <strong>Phone:</strong> +254706171725, +254757286440<br>
+                        <h4><strong>Inspire Hub  Limited</strong></h4>
+                        <p>Machakos, Kenya<br>
+                            <strong>Phone:</strong> +254715653981,+254706171725<br>
                             <strong>Email:</strong> info@inspirehub.co.ke<br>
                         </p>
                         <div class="social-links mt-3">
-                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            <a href="https://twitter.com/InspireHubSoft1" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+                            <a href="https://www.facebook.com/inspirehubsolutions" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="https://www.instagram.com/inspirehub1/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/inspire-hub-700523228/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -39,7 +36,7 @@
                         <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#services">Web Design</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#services">Web Development</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#services">Mobile Development</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#services">Bulk SMS</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#services">System Audit</a></li>
                     </ul>
                 </div>
 
@@ -58,7 +55,7 @@
 
     <div class="container">
         <div class="copyright">
-            &copy; Copyright <strong><span>Inspire Hub</span></strong>. All Rights Reserved
+            &copy;<strong><span>Inspire Hub  Limited</span></strong>. All Rights Reserved
         </div>
 
     </div>

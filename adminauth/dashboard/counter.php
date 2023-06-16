@@ -12,8 +12,8 @@ if (file_exists($COUNTER_FILENAME)) {
 
 
 if (!isset($_COOKIE['hasVisited'])) {
-    setcookie("hasVisited", "hasvisited", time()+(3600*24*7));
-  $counterValue++;
+    setcookie("hasVisited", "hasvisited", 0, "/");
+    $counterValue++;
   $file = fopen($COUNTER_FILENAME, "w");
   fwrite($file, $counterValue);
   fclose($file); 

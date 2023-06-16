@@ -11,7 +11,7 @@
                         <h4>Administrator Mbukoni Services</h4>
                         <p>
                             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            We are very satisfied and happy to have found Inspire Hub Ltd as our IT Service partner. During our relationship,
+                            We are very satisfied and happy to have found Inspire Hub  Limited Ltd as our IT Service partner. During our relationship,
                             Inpsire Hub has developed a good understanding of our operations and found a way to successfully complement our operations without causing any discontinuities or issues on our side.
                             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                         </p>
@@ -26,7 +26,7 @@
                         <p>
                             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
 
-                            Shadrack and Inspire Hub greatly exceeded my expectations for developing our ERP System. I found Shadrack to be very professional and easy to work with. His punctuality, communication skills, and patient explanations of website design terminology and concepts made it easier to adapt the system.
+                            Shadrack and Inspire Hub  Limited greatly exceeded my expectations for developing our ERP System. I found Shadrack to be very professional and easy to work with. His punctuality, communication skills, and patient explanations of website design terminology and concepts made it easier to adapt the system.
 
                             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                         </p>
@@ -40,7 +40,7 @@
                         <h4>CEO Danfi Enterprises LTD</h4>
                         <p>
                             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            I am very pleased with your Project Management capability. Your team has excellent communication skills and a fast response and turnaround time. Highest work quality. I can say that Inspire Hub is a honest and decent group of people with the highest work ethic I have seen for development team.
+                            I am very pleased with your Project Management capability. Your team has excellent communication skills and a fast response and turnaround time. Highest work quality. I can say that Inspire Hub  Limited is a honest and decent group of people with the highest work ethic I have seen for development team.
                             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                         </p>
                     </div>

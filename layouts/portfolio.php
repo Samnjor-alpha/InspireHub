@@ -1,3 +1,45 @@
+<style>
+    .port {
+        position: relative;
+        width: 50%;
+    }
+
+    .image {
+        display: block;
+        width: 200%;
+        height: 100%;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 200%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+    }
+
+    .port:hover .overlay {
+        opacity: 1;
+    }
+
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+</style>
 <section id="portfolio" class="portfolio">
     <div class="container" data-aos="fade-up">
 
@@ -10,136 +52,113 @@
             <div class="col-lg-12 d-flex justify-content-center">
                 <ul id="portfolio-flters">
                     <li data-filter="*" class="filter-active">All</li>
-                    <li data-filter=".filter-app">Mobile Development</li>
-                    <li data-filter=".filter-web">Web App</li>
+                    <li data-filter=".filter-trans">Transport</li>
+                    <li data-filter=".filter-agri">Agriculture</li>
+                    <li data-filter=".filter-real">Real Estate</li>
                 </ul>
             </div>
         </div>
 
 
-      <?php  if (mysqli_num_rows($getproducts)<1){ ?>
+
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                    <img src="assets/img/mbukoniapp.png"  class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>Mbukoni Services</h4>
-                        <p>Mobile App</p>
-                        <div class="portfolio-links">
-                            <a href="assets/img/mbukoniapp.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Mobile App 1"><i class="bx bx-plus"></i></a>
-                            <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-                        </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-trans">
+                <div class="port">
+                    <img src="product/images/naulii.png" alt="Avatar" class="image">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="text-white">NAULI</p>
+                            <a href="product/nauli.html" target="_blank" class="get-started-btn">View</a></div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                    <img src="assets/img/mb-web.png" class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>Mbukoni Web</h4>
-                        <p>Web</p>
-                        <div class="portfolio-links">
-                            <a href="assets/img/mb-web.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                            <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-                        </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-agri">
+                <div class="port">
+                    <img src="product/images/fresherp.png" alt="Avatar" class="image">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="text-white">FreshErp</p>
+                            <a href="https://fresherp.co.ke/" target="_blank" class="get-started-btn">View</a></div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                    <img src="assets/img/janiapp.png" class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>Jani</h4>
-                        <p>Mobile App</p>
-                        <div class="portfolio-links">
-                            <a href="assets/img/janiapp.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                            <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-                        </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-real">
+                <div class="port">
+                    <img src="product/images/kodi.png" alt="Avatar" class="image">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="text-white">Kodi Books</p>
+                            <a href="product/kodi.html" target="_blank" class="get-started-btn">View</a></div>
                     </div>
                 </div>
             </div>
 
 
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                    <img src="assets/img/janiweb.png" class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>Jani Fresh</h4>
-                        <p>Web</p>
-                        <div class="portfolio-links">
-                            <a href="assets/img/janiweb.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                            <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                    <img src="assets/img/glamour.png" class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>Glamour</h4>
-                        <p>Web App</p>
-                        <div class="portfolio-links">
-                            <a href="assets/img/glamour.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                            <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                    <img src="assets/img/tipper.png" class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>DanFi LTD</h4>
-                        <p>Mobile App</p>
-                        <div class="portfolio-links">
-                            <a href="assets/img/tipper.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                            <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                    <img src="assets/img/kodi.png" class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>Kodi</h4>
-                        <p>Web App</p>
-                        <div class="portfolio-links">
-                            <a href="assets/img/kodi.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Mbukoni Mobile App"><i class="bx bx-plus"></i></a>
-                            <a href="#" title="More Details"><i class="bx bx-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
 
         </div>
-        <?php }else{
-            while($rowp=mysqli_fetch_assoc($getproducts)){
-            ?>
-            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-lg-4 col-md-6 portfolio-item <?= getfilter($rowp['pcateg']) ?>">
-                    <div class="portfolio-wrap">
-                        <img src="adminauth/dashboard/uploads/<?= getproductimg($rowp['id']) ?>"  class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4><?= $rowp['pname'] ?></h4>
-                            <p><?= $rowp['pcateg'] ?></p>
-                            <div class="portfolio-links">
-                                <a href="adminauth/dashboard/uploads/<?= getproductimg($rowp['id']) ?>" data-gallery="portfolioGallery" class="portfolio-lightbox"  title="<?= $rowp['pname'] ?>"><i class="fas fa-eye"></i></a>
-                                <a  href="portfolio-details.php?product=<?= password_hash($rowp['id'],PASSWORD_DEFAULT); ?>&&id=<?= $rowp['id']?>" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
+
+
+
+
+    </div>
+
+
+
+    <div class="container" data-aos="fade-up">
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-trans">
+                <div class="port">
+                    <img src="product/images/pos.png" alt="Avatar" class="image">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="text-white">POS</p>
+                            <a href="#quote" class="get-started-btn scrollto" onclick="setposrequest()">Request Demo</a>
                         </div>
                     </div>
                 </div>
-                <?php } } ?>
             </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-trans">
+                <div class="port">
+                    <img src="product/images/hr.png" alt="Avatar" class="image">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="text-white">HRIS</p>
+                            <a href="#quote" class="get-started-btn scrollto" onclick="setHRrequest()">Request Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-trans">
+                <div class="port">
+                    <img src="product/images/bsms.png" alt="Avatar" class="image">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="text-white">Bulky SMS</p>
+                            <a href="#quote" class="get-started-btn scrollto" onclick="setSMSrequest()">Request Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+
 
 
     </div>

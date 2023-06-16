@@ -85,19 +85,19 @@
                            <option>Web App Development</option>
                            <option>IT Support</option>
                            <option>Property Management</option>
-                           <option>Bulk SMS integration</option>
+                           <option>System Audit integration</option>
                            <option>Payment Gateway Integration</option>
                            <option>Other</option>
                        </select>
                     </div>
                     <div class="form-group mt-3">
-                        <textarea class="form-control" name="message" rows="5" placeholder="Tell us more about your project" required></textarea>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us more about your project" required></textarea>
                     </div>
 
                     <div class="text-center">
 
                         <div class="text-center">
-                            <button name="request"  class="btn btn-warning"  type="submit">Request</button></div>
+                            <button name="request"  class="btn btn-info"  type="submit">Request</button></div>
 <!--                        <button name="request" class="btn btn-warning" >Request Quote</button>-->
                     </div>
                 </form>

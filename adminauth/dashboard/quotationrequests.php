@@ -2,6 +2,7 @@
 include '../admincontrollers/authcontrollers.php';
 include '../admincontrollers/helper.php';
 include '../admincontrollers/session.php';
+include '../admincontrollers/requestcontroller.php'
 
 ?>
 <!DOCTYPE html>
@@ -45,7 +46,38 @@ include '../admincontrollers/session.php';
         <!-- Main content -->
         <div class="content">
             <div class="container-fluid">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-user-tie mr-1"></i>
+                        Quotation Request
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                <tr>
+                                    <th>Full Names</th>
+                                    <th>Contacts</th>
+                                    <th>Service Request</th>
+                                    <th>About Request</th>
 
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php while ($rowp = mysqli_fetch_assoc($qrequests)): ?>
+                                    <tr>
+                                        <td><?= $rowp['client_name'] ?></td>
+                                        <td><?= $rowp['client_email'] ?><br><?= $rowp['client_tel'] ?></td>
+                                        <td><?= $rowp['service_request'] ?></td>
+                                        <td><?= $rowp['message'] ?></td>
+                                    </tr>
+                                <?php endwhile; ?>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
 
             </div><!-- /.container-fluid -->
         </div>
