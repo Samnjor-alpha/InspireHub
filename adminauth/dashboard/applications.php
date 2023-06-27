@@ -65,15 +65,20 @@ include '../admincontrollers/session.php';
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <?php while ($rowp = mysqli_fetch_assoc($attaches)): ?>
+                                <?php
+
+                                while ($rowp = mysqli_fetch_assoc($attaches)): ?>
                                     <tr>
                                         <td><?= $rowp['full_names'] ?></td>
                                         <td><?= $rowp['email'] ?><br><?= $rowp['tel'] ?></td>
-                                        <td><?= $rowp['campus'] ?><br><?= $rowp['course'] ?></td>
+                                        <td><?= $rowp['campus'] ?><br><?= $rowp['course'] ?>
+                                            <br>
+                                           <?= getattachmentfile($rowp['attFile']);?></td>
                                         <td>
                                             Expected Start Date: <?= date('D, d.M.Y', strtotime($rowp['sDate'])) ?><br>
                                             Expected End Date: <?= date('D, d.M.Y', strtotime($rowp['Edate'])) ?><br>
                                             Period Time: <span class="badge badge-info"><?= calculateMonthPeriod($rowp['sDate'], $rowp['Edate']) ?></span>
+
                                         </td>
                                         <td><?= attastatus($rowp['Status']) ?></td>
                                         <td>

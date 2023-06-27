@@ -1,5 +1,5 @@
 <section id="contact" class="contact">
-    <div class="container" data-aos="fade-up">
+    <div class="container" >
 
         <div class="section-title">
             <h2>Contact</h2>
@@ -50,7 +50,7 @@
     </div>
 </section><!-- End Contact Section -->
 <section id="quote" class="contact">
-    <div class="container" data-aos="fade-up">
+    <div class="container" >
 
         <div class="section-title">
             <h2>Quotation</h2>

@@ -1,5 +1,5 @@
 <section id="services" class="services">
-    <div class="container" data-aos="fade-up">
+    <div class="container" >
 
         <div class="section-title">
             <h2>Services</h2>

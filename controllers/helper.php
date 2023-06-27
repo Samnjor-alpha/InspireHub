@@ -1,12 +1,4 @@
 <?php
-//const EMAIL_USE_SMTP = true;
-//const EMAIL_SMTP_HOST = "mail.inspirehub.co.ke";
-//const EMAIL_SMTP_AUTH = true;
-//const EMAIL_SMTP_USERNAME = "applications@inspirehub.co.ke";
-//const EMAIL_SMTP_PASSWORD = "Inspire@2023";
-//const EMAIL_SMTP_PORT = 465;
-//const EMAIL_SMTP_ENCRYPTION = "tsl";
-
 
 function quotationid(){
     $ref="QTD";

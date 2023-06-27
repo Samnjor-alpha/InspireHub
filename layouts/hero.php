@@ -1,7 +1,7 @@
 <section id="hero" class="d-flex align-items-center justify-content-center">
-    <div class="container" data-aos="fade-up">
+    <div class="container" >
 
-        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="row justify-content-center"  data-aos-delay="150">
             <div class="col-xl-6 col-lg-8">
                 <h1>IT and  Business Consultancy</h1>
 

@@ -41,14 +41,14 @@
     }
 </style>
 <section id="portfolio" class="portfolio">
-    <div class="container" data-aos="fade-up">
+    <div class="container" >
 
         <div class="section-title">
             <h2>Our Works</h2>
             <p>Check our Products</p>
         </div>
 
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="row"  data-aos-delay="100">
             <div class="col-lg-12 d-flex justify-content-center">
                 <ul id="portfolio-flters">
                     <li data-filter="*" class="filter-active">All</li>
@@ -61,7 +61,7 @@
 
 
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="row portfolio-container"  data-aos-delay="200">
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-trans">
                 <div class="port">
@@ -111,9 +111,9 @@
 
 
 
-    <div class="container" data-aos="fade-up">
+    <div class="container" >
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="row portfolio-container"  data-aos-delay="200">
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-trans">
                 <div class="port">

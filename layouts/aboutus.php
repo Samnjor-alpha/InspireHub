@@ -1,5 +1,5 @@
 <section id="about" class="about">
-    <div class="container" data-aos="fade-up">
+    <div class="container" >
 
         <div class="row">
             <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
@@ -34,13 +34,13 @@
                     <li><i class="ri-check-double-line"></i>Agri-Business Industry</li>
                     <li><i class="ri-check-double-line"></i>Learning Institutions</li>
                 </ul>
-                <div class="content mb-2" data-aos="fade-up">
+                <div class="content mb-2" >
                     <h3>Vision</h3>
                     <p>
                         To provide clients with easy to use and simplified management tools and payments solutions for their day to day work
                     </p>
                 </div>
-                <div class="content mt-2" data-aos="fade-up">
+                <div class="content mt-2" >
                     <h3>Mission Statement</h3>
                     <p>
                         To be a global leader in provision of digital and innovative management and payment solutions to our clients in making work easier.

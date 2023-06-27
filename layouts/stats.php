@@ -1,5 +1,5 @@
 <section id="counts" class="counts">
-    <div class="container" data-aos="fade-up">
+    <div class="container" >
 
         <div class="row no-gutters">
             <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start" data-aos="fade-right" data-aos-delay="100"></div>

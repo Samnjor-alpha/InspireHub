@@ -1,5 +1,5 @@
 <section id="team" class="team">
-    <div class="container" data-aos="fade-up">
+    <div class="container" >
 
         <div class="section-title">
             <h2>Team</h2>
@@ -9,7 +9,7 @@
         <div class="row">
 
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="member" data-aos="fade-up" data-aos-delay="100">
+                <div class="member"  data-aos-delay="100">
                     <div class="member-img">
                         <img src="https://via.placeholder.com/600x600.png?text=CEO" class="img-fluid" alt="">
                         <div class="social">
@@ -27,7 +27,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="member" data-aos="fade-up" data-aos-delay="200">
+                <div class="member"  data-aos-delay="200">
                     <div class="member-img">
                         <img src="https://via.placeholder.com/600x600.png?text=Quality Assurance" class="img-fluid" alt="">
                         <div class="social">
@@ -45,7 +45,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="member" data-aos="fade-up" data-aos-delay="300">
+                <div class="member"  data-aos-delay="300">
                     <div class="member-img">
                         <img src="https://via.placeholder.com/600x600.png?text=Mobile Developer" class="img-fluid" alt="">
                         <div class="social">
@@ -63,7 +63,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="member" data-aos="fade-up" data-aos-delay="400">
+                <div class="member"  data-aos-delay="400">
                     <div class="member-img">
                         <img src="https://via.placeholder.com/600x600.png?text=Full stack Developer" class="img-fluid" alt="">
                         <div class="social">
@@ -80,7 +80,7 @@
                 </div>
             </div>
 <!--            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">-->
-<!--                <div class="member" data-aos="fade-up" data-aos-delay="300">-->
+<!--                <div class="member"  data-aos-delay="300">-->
 <!--                    <div class="member-img">-->
 <!--                        <img src="https://via.placeholder.com/600x600.png?text=Business Development" class="img-fluid" alt="">-->
 <!--                        <div class="social">-->

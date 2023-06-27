@@ -4,6 +4,36 @@ require 'vendor/phpmailer/phpmailer/src/Exception.php';
 require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require 'vendor/phpmailer/phpmailer/src/SMTP.php';
 require 'vendor/autoload.php';
+
+use AfricasTalking\SDK\AfricasTalking;
+
+function sendnotifysms($tel,$name)
+{
+    $username = 'demakyd';
+    $apiKey   = '6a7d1338d354f0e5d164ae0aa2c0177188b530bad402ad4842af1564563bcc04'; // use your sandbox app API key for development in the test environment
+    $AT       = new AfricasTalking($username, $apiKey);
+
+// Get one of the services
+    $sms      = $AT->sms();
+    $msg=composeremindsms($name);
+// Use the service
+    try {
+        $result = $sms->send([
+            'to' => $tel,
+            'message' => $msg
+        ]);
+        return true;
+    }catch (Exception $e) {
+        return false;
+    }
+
+}
+
+function composeremindsms($name)
+{
+    return "Dear ".$name.", .We have successfully received your application and will review your information shortly.";
+}
+
 function checkifAttrequested($email, $tel)
 {
     global $conn;
@@ -15,7 +45,7 @@ function checkifAttrequested($email, $tel)
         return false;
     }
 }
-function addapplication($appId,$flname,$email,$tel,$campus,$course,$sdate,$edate)
+function addapplication($appId,$flname,$email,$tel,$campus,$course,$sdate,$edate,$file)
 {
 
     global $conn;
@@ -28,6 +58,7 @@ function addapplication($appId,$flname,$email,$tel,$campus,$course,$sdate,$edate
                                   tel='$tel',
                                   campus='$campus',
                                   course='$course',
+                                  attFile='$file',
                                   sDate='$sdate',
                                   Edate='$edate',
                                   ADate='$today'";
@@ -85,3 +116,4 @@ function notifyapplicant($name, $email,$referenceNumber): bool
             return true;
         }
     }
+
