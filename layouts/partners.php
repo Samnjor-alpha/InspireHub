@@ -6,22 +6,22 @@
         </div>
         <section class="customer-logos slider">
             <div class="slide">
-                <img decoding="async" src="assets/img/ncba.jpg">
+                <img decoding="async" src="https://images.inspirehub.co.ke/ncba.jpg">
             </div>
             <div class="slide">
-                <img decoding="async" src="assets/img/saf.jpg">
+                <img decoding="async" src="https://images.inspirehub.co.ke/saf.jpg">
             </div>
             <div class="slide">
-                <img decoding="async" src="assets/img/mpesa.png">
+                <img decoding="async" src="https://images.inspirehub.co.ke/mpesa.png">
             </div>
             <div class="slide">
-                <img decoding="async" src="assets/img/at.png">
+                <img decoding="async" src="https://images.inspirehub.co.ke/at.png">
             </div>
             <div class="slide">
-                <img decoding="async" src="assets/img/fr.jpeg">
+                <img decoding="async" src="https://images.inspirehub.co.ke/fr.jpeg">
             </div>
             <div class="slide">
-                <img decoding="async" src="assets/img/lens.jpeg">
+                <img decoding="async" src="https://images.inspirehub.co.ke/lens.jpeg">
             </div>
         </section>
     </div>

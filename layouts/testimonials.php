@@ -6,7 +6,7 @@
 
                 <div class="swiper-slide">
                     <div class="testimonial-item">
-                        <img src="https://ui-avatars.com/api/?name=Alfred Kyalo&background=0D8ABC&color=fff" class="testimonial-img" alt="">
+                        <img src="https://ui-avatars.com/api/?name=Dorcas Kalekye&background=0D8ABC&color=fff" class="testimonial-img" alt="">
                         <h3>Dorcas Kalekye</h3>
                         <h4>Administrator Mbukoni Services</h4>
                         <p>
@@ -20,7 +20,7 @@
 
                 <div class="swiper-slide">
                     <div class="testimonial-item">
-                        <img src="https://ui-avatars.com/api/?name=Diana Kyalo&background=0D8ABC&color=fff" class="testimonial-img" alt="">
+                        <img src="https://ui-avatars.com/api/?name=Grace Wangui&background=0D8ABC&color=fff" class="testimonial-img" alt="">
                         <h3>Grace Wang'ui</h3>
                         <h4>Administrative Assistant  JaniFresh</h4>
                         <p>

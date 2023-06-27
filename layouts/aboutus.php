@@ -3,8 +3,8 @@
 
         <div class="row">
             <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-<!--                <img src="assets/img/aboutus.svg" class="img-fluid" alt="">-->
-                <img src="assets/img/aboutus.svg" class="img-fluid" alt="">
+<!--                <img src="https://images.inspirehub.co.ke/aboutus.svg" class="img-fluid" alt="">-->
+                <img src="https://images.inspirehub.co.ke/aboutus.svg" class="img-fluid" alt="">
 <!--                https://images.unsplash.com/photo-1547371026-a3952b80acb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=465&q=8-->
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">

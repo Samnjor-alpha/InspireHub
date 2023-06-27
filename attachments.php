@@ -20,7 +20,7 @@ include 'controllers/applyattachmentcontroller.php'
             </a>
             <div class="ms-auto mr-1 p-3">
                 <a href="index.php" class="logo">
-                    <img src="assets/img/logo.png" alt="" class="img-fluid bg-white logo rounded-2 p-2">
+                    <img src="https://images.inspirehub.co.ke/logo.png" alt="" class="img-fluid bg-white logo rounded-2 p-2">
                 </a>
             </div>
         </nav>

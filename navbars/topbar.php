@@ -2,7 +2,7 @@
 
 <!--        <h1 class="logo me-auto me-lg-0"><a href="index.php">Inspire Hub  Limited<span>.</span></a></h1>-->
         <!-- Uncomment below if you prefer to use an image logo -->
-         <a href="index.php" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid bg-white logo rounded-2 p-2"></a>
+         <a href="index.php" class="logo me-auto me-lg-0"><img src="https://images.inspirehub.co.ke/logo.png" alt="" class="img-fluid bg-white logo rounded-2 p-2"></a>
 
     <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>

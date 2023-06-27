@@ -10,7 +10,7 @@
 
         <div class="row mt-2">
             <div class="col-lg-6 col-sm-6 order-1 order-lg-2 mt-2" data-aos="fade-left" data-aos-delay="100">
-                <img src="assets/img/apply.svg" class="img-fluid" alt="">
+                <img src="https://images.inspirehub.co.ke/apply.svg" class="img-fluid" alt="">
             </div>
             <div  class="col-sm-6 col-lg-6 mt-5 mt-lg-0">
 
